@@ -10,7 +10,7 @@ const WeatherCity = ({ weatherData }) => {
       <h2 className="text-xl mb-4">{name}</h2>
       <div>
         <div className="flex justify-between gap-4">
-          <span className="md:w-20">{weather[0].description}</span>
+          <span className="w-20">{weather[0].description}</span>
           <img
             src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`}
             alt={weather[0].description}

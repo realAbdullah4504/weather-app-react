@@ -6,17 +6,20 @@ const Weather = () => {
   const { weatherData, deleteCity } = useWeather();
 
   return (
-    <div className="flex flex-col md:flex-row gap-5 py-4 px-6 flex-wrap">
+    <div className="flex flex-wrap">
       {weatherData.length > 0 &&
         weatherData.map((data) => (
-          <div key={data.id} className="relative">
-            <FeatherIcon
-              icon="x"
-              size="25"
-              className="absolute top-[-10px] right-[-10px] bg-red-800 text-white rounded-[50%] shadow-md cursor-pointer"
-              onClick={() => deleteCity(data.id)}
+          <div key={data.id} className="relative w-full sm:w-1/2 md:w-1/3 lg-w-1/4 xl:w-1/5 2xl:w-1/6 px-2 py-2">
+            <FeatherIcon 
+            icon="x"
+            size={25}
+            className="absolute top-[-5px] right-[-5px] cursor-pointer bg-red-700 text-white p-1 rounded-full"
             />
-            <WeatherCity weatherData={data} />
+            <WeatherCity
+              key={data.id}
+              weatherData={data}
+              deleteCity={deleteCity}
+            />
           </div>
         ))}
     </div>

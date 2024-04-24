@@ -24,16 +24,16 @@ const InputCity = () => {
     setCity("");
   };
   return (
-    <div className="flex flex-col md:flex-row gap-5 py-4 px-4">
+    <div className="py-4 flex flex-wrap gap-4 justify-center">
       <input
         type="text"
         placeholder="Enter city name..."
-        className="w-full border bg-cyan-50 border-cyan-600 rounded py-2 px-3 focus:outline-none focus:ring focus:ring-cyan-800"
+        className="border bg-cyan-50 border-cyan-600 rounded py-2 px-3 focus:outline-none focus:ring focus:ring-cyan-600 w-full md:w-1/4"
         value={city}
         onChange={handleCityChange}
       />
       <button
-        className="bg-cyan-600 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded-r w-full md:w-1/4"
+        className="bg-cyan-600 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded-md w-full md:w-1/6 rounded-lg"
         onClick={handleSubmit}
       >
         Get Weather

@@ -14,6 +14,7 @@ const Weather = () => {
             icon="x"
             size={25}
             className="absolute top-[-5px] right-[-5px] cursor-pointer bg-red-700 text-white p-1 rounded-full"
+            onClick={() => deleteCity(data.id)}
             />
             <WeatherCity
               key={data.id}
